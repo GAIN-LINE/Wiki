@@ -7,12 +7,10 @@ Homestead.yaml
 .idea
 npm-debug.log
 yarn-error.log
-/public/dist
 /public/plugins
 /public/css
 /public/js
 /public/bower
-/public/build/
 /public/favicon.ico
 /storage/images
 _ide_helper.php
