@@ -163,6 +163,8 @@ return [
     'about' => 'Over de bewerker',
     'about_title' => 'Over de WYSIWYG Bewerker',
     'editor_license' => 'Bewerker Licentie & Copyright',
+    'editor_lexical_license' => 'Deze editor is gemaakt als een fork van :lexicalLink welke is verstrekt onder de MIT-licentie.',
+    'editor_lexical_license_link' => 'Volledige licentieinformatie kan hier gevonden worden.',
     'editor_tiny_license' => 'Deze editor is gemaakt met behulp van :tinyLink welke is verstrekt onder de MIT-licentie.',
     'editor_tiny_license_link' => 'De copyright- en licentiegegevens van TinyMCE vindt u hier.',
     'save_continue' => 'Pagina opslaan en verdergaan',

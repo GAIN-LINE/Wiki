@@ -10,7 +10,7 @@ return [
 
     // Auth
     'error_user_exists_different_creds' => 'Lietotājs ar epastu :email bet ar citiem piekļuves datiem jau eksistē.',
-    'auth_pre_register_theme_prevention' => 'User account could not be registered for the provided details',
+    'auth_pre_register_theme_prevention' => 'Lietotāja kontu nevar reģistrēt ar norādītajām detaļām',
     'email_already_confirmed' => 'Epasts jau ir apstiprināts, mēģini ielogoties.',
     'email_confirmation_invalid' => 'Šis apstiprinājuma žetons nav derīgs vai jau ir izmantots. Lūdzu, mēģiniet reģistrēties vēlreiz.',
     'email_confirmation_expired' => 'Apstiprinājuma žetona derīguma termiņš ir beidzies. Ir nosūtīts jauns apstiprinājuma e-pasts.',
@@ -37,7 +37,7 @@ return [
     'social_driver_not_found' => 'Sociālā tīkla savienojums nav atrasts',
     'social_driver_not_configured' => 'Jūsu :socialAccount sociālie iestatījumi nav uzstādīti pareizi.',
     'invite_token_expired' => 'Šī uzaicinājuma saite ir novecojusi. Tā vietā jūs varat mēģināt atiestatīt sava konta paroli.',
-    'login_user_not_found' => 'A user for this action could not be found.',
+    'login_user_not_found' => 'Šai darbībai netika atrasts lietotājs.',
 
     // System
     'path_not_writable' => 'Faila ceļā :filePath nav iespējams ielādēt failus. Lūdzu pārliecinieties, ka serverim tur ir rakstīšanas tiesības.',
@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'Jūs nevarat dzēst vienīgo administratoru',
     'users_cannot_delete_guest' => 'Jūs nevarat dzēst lietotāju "viesis"',
+    'users_could_not_send_invite' => 'Could not create user since invite email failed to send',
 
     // Roles
     'role_cannot_be_edited' => 'Šo lomu nevar rediģēt',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'Radusies kļūda',
     'app_down' => ':appName pagaidām nav pieejams',
     'back_soon' => 'Drīz būs atkal pieejams.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'Pieprasījumā nav atrasts autorizācijas žetons',

@@ -787,6 +787,20 @@ class OidcTest extends TestCase
         $this->assertTrue($user->hasRole($roleA->id));
     }
 
+    public function test_userinfo_endpoint_response_with_complex_json_content_type_handled()
+    {
+        $userinfoResponseData = [
+            'sub' => OidcJwtHelper::defaultPayload()['sub'],
+            'name' => 'Barry',
+        ];
+        $userinfoResponse = new Response(200, ['Content-Type'  => 'Application/Json ; charset=utf-8'], json_encode($userinfoResponseData));
+        $resp = $this->runLogin(['name' => null], [$userinfoResponse]);
+        $resp->assertRedirect('/');
+
+        $user = User::where('email', OidcJwtHelper::defaultPayload()['email'])->first();
+        $this->assertEquals('Barry', $user->name);
+    }
+
     public function test_userinfo_endpoint_jwks_response_handled()
     {
         $userinfoResponseData = OidcJwtHelper::idToken(['name' => 'Barry Jwks']);
@@ -847,6 +861,26 @@ class OidcTest extends TestCase
         $resp = $this->runLogin(['name' => null], [$userinfoResponse]);
         $resp->assertRedirect('/login');
         $this->assertSessionError('Userinfo endpoint response validation failed with error: No valid subject value found in userinfo data');
+    }
+
+    public function test_userinfo_endpoint_not_called_if_empty_groups_array_provided_in_id_token()
+    {
+        config()->set([
+            'oidc.user_to_groups'     => true,
+            'oidc.groups_claim'       => 'groups',
+            'oidc.remove_from_groups' => false,
+        ]);
+
+        $this->post('/oidc/login');
+        $state = session()->get('oidc_state');
+        $client = $this->mockHttpClient([$this->getMockAuthorizationResponse([
+            'groups' => [],
+        ])]);
+
+        $resp = $this->get('/oidc/callback?code=SplxlOBeZQQYbYS6WxSbIA&state=' . $state);
+        $resp->assertRedirect('/');
+        $this->assertEquals(1, $client->requestCount());
+        $this->assertTrue(auth()->check());
     }
 
     protected function withAutodiscovery(): void

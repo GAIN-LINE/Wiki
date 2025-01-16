@@ -84,6 +84,14 @@ return [
     'webhook_delete' => 'がWebhookを削除',
     'webhook_delete_notification' => 'Webhookを削除しました',
 
+    // Imports
+    'import_create' => 'created import',
+    'import_create_notification' => 'インポートファイルが正常にアップロードされました',
+    'import_run' => 'updated import',
+    'import_run_notification' => 'コンテンツが正常にインポートされました',
+    'import_delete' => 'deleted import',
+    'import_delete_notification' => 'インポートファイルが正常に削除されました',
+
     // Users
     'user_create' => 'がユーザを作成',
     'user_create_notification' => 'ユーザーを作成しました',

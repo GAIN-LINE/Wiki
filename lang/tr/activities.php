@@ -84,12 +84,20 @@ return [
     'webhook_delete' => 'web kancası silindi',
     'webhook_delete_notification' => 'Web kancası başarıyla silindi',
 
+    // Imports
+    'import_create' => 'created import',
+    'import_create_notification' => 'Import successfully uploaded',
+    'import_run' => 'updated import',
+    'import_run_notification' => 'Content successfully imported',
+    'import_delete' => 'deleted import',
+    'import_delete_notification' => 'Import successfully deleted',
+
     // Users
     'user_create' => 'created user',
     'user_create_notification' => 'Kullanıcı başarıyla oluşturuldu',
     'user_update' => 'updated user',
     'user_update_notification' => 'Kullanıcı başarıyla güncellendi',
-    'user_delete' => 'deleted user',
+    'user_delete' => 'kullanıcı silindi',
     'user_delete_notification' => 'Kullanıcı başarıyla silindi',
 
     // API Tokens

@@ -40,14 +40,14 @@ return [
     'book_sort_notification'      => 'Kniha byla úspěšně seřazena',
 
     // Bookshelves
-    'bookshelf_create'            => 'vytvořit knihovnu',
-    'bookshelf_create_notification'    => 'Knihovna byla úspěšně vytvořena',
-    'bookshelf_create_from_book'    => 'převést knihu na knihovnu',
-    'bookshelf_create_from_book_notification'    => 'Kniha byla úspěšně převedena na knihovnu',
-    'bookshelf_update'                 => 'aktualizovat knihovnu',
-    'bookshelf_update_notification'    => 'Knihovna byla úspěšně aktualizována',
-    'bookshelf_delete'                 => 'odstranit knihovnu',
-    'bookshelf_delete_notification'    => 'Knihovna byla úspěšně smazána',
+    'bookshelf_create'            => 'vytvořil polici',
+    'bookshelf_create_notification'    => 'Police byla úspěšně vytvořena',
+    'bookshelf_create_from_book'    => 'převést knihu na polici',
+    'bookshelf_create_from_book_notification'    => 'Kniha byla úspěšně převedena na polici',
+    'bookshelf_update'                 => 'aktualizovat polici',
+    'bookshelf_update_notification'    => 'Police byla úspěšně aktualizována',
+    'bookshelf_delete'                 => 'odstranil polici',
+    'bookshelf_delete_notification'    => 'Police byla úspěšně odstraněna',
 
     // Revisions
     'revision_restore' => 'obnovil revizi',
@@ -83,6 +83,14 @@ return [
     'webhook_update_notification' => 'Webhook byl úspěšně aktualizován',
     'webhook_delete' => 'odstranil/a webhook',
     'webhook_delete_notification' => 'Webhook byl úspěšně odstraněn',
+
+    // Imports
+    'import_create' => 'vytvořil/a import',
+    'import_create_notification' => 'Import byl úspěšně nahrán',
+    'import_run' => 'aktualizoval/a import',
+    'import_run_notification' => 'Obsah byl úspěšně importován',
+    'import_delete' => 'odstranil/a import',
+    'import_delete_notification' => 'Import byl úspěšně odstraněn',
 
     // Users
     'user_create' => 'vytvořil uživatele',

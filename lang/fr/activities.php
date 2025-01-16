@@ -84,6 +84,14 @@ return [
     'webhook_delete' => 'supprimer un Webhook',
     'webhook_delete_notification' => 'Webhook supprimé avec succès',
 
+    // Imports
+    'import_create' => 'import créé',
+    'import_create_notification' => 'Importation envoyée avec succès',
+    'import_run' => 'importation mise à jour',
+    'import_run_notification' => 'Contenu importé avec succès',
+    'import_delete' => 'import supprimé',
+    'import_delete_notification' => 'Importation supprimée avec succès',
+
     // Users
     'user_create' => 'utilisateur créé',
     'user_create_notification' => 'Utilisateur créé avec succès',

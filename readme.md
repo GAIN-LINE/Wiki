@@ -49,7 +49,7 @@ Big thanks to these companies for supporting the project.
 
 <table><tbody><tr>
 <td align="center"><a href="https://www.federated.computer/bookstack/" target="_blank">
-    <img width="480" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/federated-computer.png" alt="Federated.computer">
+    <img width="480" src="https://www.bookstackapp.com/images/sponsors/federated-computer.png" alt="Federated.computer">
 </a></td>
 </tr></tbody></table>
 
@@ -57,36 +57,40 @@ Big thanks to these companies for supporting the project.
 
 <table><tbody><tr>
 <td align="center"><a href="https://www.diagrams.net/" target="_blank">
-    <img width="240" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/diagramsnet.png" alt="Diagrams.net">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/diagramsnet.png" alt="Diagrams.net">
 </a></td>
 <td align="center"><a href="https://cloudabove.com/hosting" target="_blank">
-    <img width="200" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/cloudabove.png" alt="Cloudabove">
+    <img width="200" src="https://www.bookstackapp.com/images/sponsors/cloudabove.png" alt="Cloudabove">
 </a></td>
 </tr><tr>
 <td align="center"><a href="https://www.practicali.be" target="_blank">
-    <img width="240" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/practicali.png" alt="Practicali">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/practicali.png" alt="Practicali">
 </a></td>
 <td align="center"><a href="https://www.stellarhosted.com/bookstack/" target="_blank">
-    <img width="240" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/stellarhosted.png" alt="Stellar Hosted">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/stellarhosted.png" alt="Stellar Hosted">
 </a></td>
 </tr>
 <tr>
 <td align="center" style="text-align: center"><a href="https://nws.netways.de/apps/bookstack/" target="_blank">
-    <img width="240" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/netways.png" alt="NETWAYS Web Services">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/netways.png" alt="NETWAYS Web Services">
 </a></td>
 <td align="center" style="text-align: center"><a href="https://www.schroeck-consulting.de/" target="_blank">
-    <img width="200" src="https://media.githubusercontent.com/media/BookStackApp/website/main/static/images/sponsors/schroeck-consulting.png" alt="Schroeck IT Consulting">
+    <img width="200" src="https://www.bookstackapp.com/images/sponsors/schroeck-consulting.png" alt="Schroeck IT Consulting">
+</a></td>
+</tr>
+<tr>
+<td align="center"><a href="https://practinet.be/" target="_blank">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/practinet.png" alt="Practinet">
+</a></td>
+<td align="center"><a href="https://transporttalent.com" target="_blank">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/transport-talent.png" alt="Transport Talent">
+</a></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><a href="https://route4me.com/" target="_blank">
+    <img width="240" src="https://www.bookstackapp.com/images/sponsors/route4me.png" alt="Route4Me - Route Optimizer and Route Planner Software">
 </a></td>
 </tr></tbody></table>
-
-## 🛣️ Road Map
-
-Below is a high-level road map view for BookStack to provide a sense of direction of where the project is going. This can change at any point and does not reflect many features and improvements that will also be included as part of the journey along this road map. For more granular detail of what will be included in upcoming releases you can review the project milestones as defined in our [Release Process](dev/docs/release-process.md) documentation.
-
-- **Platform REST API** - *(Most actions implemented, maturing)*
-    - *A REST API covering, at minimum, control of core content models (Books, Chapters, Pages) for automation and platform extension.*
-- **Permission System Review** - *(In Progress)*
-    - *Improvement in how permissions are applied and a review of the efficiency of the permission & roles system.*
 
 ## 🛠️ Development & Testing
 
@@ -148,6 +152,7 @@ Note: This is not an exhaustive list of all libraries and projects that would be
 
 * [Laravel](http://laravel.com/) - _[MIT](https://github.com/laravel/framework/blob/v8.82.0/LICENSE.md)_
 * [TinyMCE](https://www.tinymce.com/) - _[MIT](https://github.com/tinymce/tinymce/blob/develop/LICENSE.TXT)_
+* [Lexical](https://lexical.dev/) - _[MIT](https://github.com/facebook/lexical/blob/main/LICENSE)_
 * [CodeMirror](https://codemirror.net) - _[MIT](https://github.com/codemirror/CodeMirror/blob/master/LICENSE)_
 * [Sortable](https://github.com/SortableJS/Sortable) - _[MIT](https://github.com/SortableJS/Sortable/blob/master/LICENSE)_
 * [Google Material Icons](https://github.com/google/material-design-icons) - _[Apache-2.0](https://github.com/google/material-design-icons/blob/master/LICENSE)_

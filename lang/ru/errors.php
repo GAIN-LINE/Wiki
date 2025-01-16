@@ -37,7 +37,7 @@ return [
     'social_driver_not_found' => 'Драйвер для Соцсети не найден',
     'social_driver_not_configured' => 'Настройки вашего :socialAccount заданы неправильно.',
     'invite_token_expired' => 'Срок действия приглашения истек. Вместо этого вы можете попытаться сбросить пароль своей учетной записи.',
-    'login_user_not_found' => 'A user for this action could not be found.',
+    'login_user_not_found' => 'Пользователь для этого действия не найден.',
 
     // System
     'path_not_writable' => 'Невозможно загрузить файл по пути :filePath. Убедитесь что сервер доступен для записи.',
@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'Вы не можете удалить единственного администратора',
     'users_cannot_delete_guest' => 'Вы не можете удалить гостевого пользователя',
+    'users_could_not_send_invite' => 'Could not create user since invite email failed to send',
 
     // Roles
     'role_cannot_be_edited' => 'Эта роль не может быть изменена',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'Произошла ошибка',
     'app_down' => ':appName в данный момент не доступно',
     'back_soon' => 'Скоро восстановится.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'Отсутствует токен авторизации в запросе',

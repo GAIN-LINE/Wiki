@@ -11,7 +11,7 @@ use BookStack\Entities\Models\PageRevision;
 use BookStack\Entities\Queries\EntityQueries;
 use BookStack\Entities\Tools\BookContents;
 use BookStack\Entities\Tools\PageContent;
-use BookStack\Entities\Tools\PageEditorData;
+use BookStack\Entities\Tools\PageEditorType;
 use BookStack\Entities\Tools\TrashCan;
 use BookStack\Exceptions\MoveOperationException;
 use BookStack\Exceptions\PermissionsException;
@@ -43,6 +43,7 @@ class PageRepo
             'owned_by'   => user()->id,
             'updated_by' => user()->id,
             'draft'      => true,
+            'editor'     => PageEditorType::getSystemDefault()->value,
         ]);
 
         if ($parent instanceof Chapter) {
@@ -87,6 +88,17 @@ class PageRepo
     }
 
     /**
+     * Directly update the content for the given page from the provided input.
+     * Used for direct content access in a way that performs required changes
+     * (Search index & reference regen) without performing an official update.
+     */
+    public function setContentFromInput(Page $page, array $input): void
+    {
+        $this->updateTemplateStatusAndContentFromInput($page, $input);
+        $this->baseRepo->update($page, []);
+    }
+
+    /**
      * Update a page in the system.
      */
     public function update(Page $page, array $input): Page
@@ -120,14 +132,16 @@ class PageRepo
         return $page;
     }
 
-    protected function updateTemplateStatusAndContentFromInput(Page $page, array $input)
+    protected function updateTemplateStatusAndContentFromInput(Page $page, array $input): void
     {
         if (isset($input['template']) && userCan('templates-manage')) {
             $page->template = ($input['template'] === 'true');
         }
 
         $pageContent = new PageContent($page);
-        $currentEditor = $page->editor ?: PageEditorData::getSystemDefaultEditor();
+        $defaultEditor = PageEditorType::getSystemDefault();
+        $currentEditor = PageEditorType::forPage($page) ?: $defaultEditor;
+        $inputEditor = PageEditorType::fromRequestValue($input['editor'] ?? '') ?? $currentEditor;
         $newEditor = $currentEditor;
 
         $haveInput = isset($input['markdown']) || isset($input['html']);
@@ -136,15 +150,17 @@ class PageRepo
         if ($haveInput && $inputEmpty) {
             $pageContent->setNewHTML('', user());
         } elseif (!empty($input['markdown']) && is_string($input['markdown'])) {
-            $newEditor = 'markdown';
+            $newEditor = PageEditorType::Markdown;
             $pageContent->setNewMarkdown($input['markdown'], user());
         } elseif (isset($input['html'])) {
-            $newEditor = 'wysiwyg';
+            $newEditor = ($inputEditor->isHtmlBased() ? $inputEditor : null) ?? ($defaultEditor->isHtmlBased() ? $defaultEditor : null) ?? PageEditorType::WysiwygTinymce;
             $pageContent->setNewHTML($input['html'], user());
         }
 
-        if ($newEditor !== $currentEditor && userCan('editor-change')) {
-            $page->editor = $newEditor;
+        if (($newEditor !== $currentEditor || empty($page->editor)) && userCan('editor-change')) {
+            $page->editor = $newEditor->value;
+        } elseif (empty($page->editor)) {
+            $page->editor = $defaultEditor->value;
         }
     }
 

@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'لا يمكن حذف المشرف الوحيد',
     'users_cannot_delete_guest' => 'لا يمكن حذف المستخدم الضيف',
+    'users_could_not_send_invite' => 'Could not create user since invite email failed to send',
 
     // Roles
     'role_cannot_be_edited' => 'لا يمكن تعديل هذا الدور',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'حدث خطأ',
     'app_down' => ':appName لا يعمل حالياً',
     'back_soon' => 'سيعود للعمل قريباً.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'لم يتم العثور على رمز ترخيص مميز في الطلب',

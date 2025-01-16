@@ -5,11 +5,11 @@
 return [
 
     // Permissions
-    'permission' => 'You do not have permission to access the requested page.',
-    'permissionJson' => 'You do not have permission to perform the requested action.',
+    'permission' => 'Немате дозволу да приступите овој страни.',
+    'permissionJson' => 'Немате овлашћење да извршите ову акцију.',
 
     // Auth
-    'error_user_exists_different_creds' => 'A user with the email :email already exists but with different credentials.',
+    'error_user_exists_different_creds' => 'Корисник са е-мејл адресом :email већ постоји са другим приступним подацима.',
     'auth_pre_register_theme_prevention' => 'User account could not be registered for the provided details',
     'email_already_confirmed' => 'Email has already been confirmed, Try logging in.',
     'email_confirmation_invalid' => 'This confirmation token is not valid or has already been used, Please try registering again.',
@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'Не можете обрисати јединог администратора',
     'users_cannot_delete_guest' => 'Не можете обрисати госта',
+    'users_could_not_send_invite' => 'Could not create user since invite email failed to send',
 
     // Roles
     'role_cannot_be_edited' => 'Ова улога се не може мењати',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'Догодила се грешка',
     'app_down' => ':appName is down right now',
     'back_soon' => 'It will be back up soon.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'No authorization token found on the request',

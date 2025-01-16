@@ -163,6 +163,8 @@ return [
     'about' => 'エディタについて',
     'about_title' => 'WYSIWYGエディタについて',
     'editor_license' => 'エディタのライセンスと著作権',
+    'editor_lexical_license' => 'このエディタはMITライセンスの下で配布されている :lexicalLink のフォークとして構築されています。',
+    'editor_lexical_license_link' => '完全なライセンスの詳細はこちらをご覧ください。',
     'editor_tiny_license' => 'このエディタはMITライセンスの下で提供される:tinyLinkを利用して構築されています。',
     'editor_tiny_license_link' => 'TinyMCEの著作権およびライセンスの詳細は、こちらをご覧ください。',
     'save_continue' => 'ページを保存して続行',

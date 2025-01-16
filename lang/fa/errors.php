@@ -10,7 +10,7 @@ return [
 
     // Auth
     'error_user_exists_different_creds' => 'کاربری با ایمیل :email از قبل وجود دارد اما دارای اطلاعات متفاوتی می باشد.',
-    'auth_pre_register_theme_prevention' => 'User account could not be registered for the provided details',
+    'auth_pre_register_theme_prevention' => 'بر اساس اطلاعات ارائه شده، حساب کاربری نمی‌نواند ایجاد بشود',
     'email_already_confirmed' => 'ایمیل قبلا تایید شده است، وارد سیستم شوید.',
     'email_confirmation_invalid' => 'این کلمه عبور معتبر نمی باشد و یا قبلا استفاده شده است، لطفا دوباره ثبت نام نمایید.',
     'email_confirmation_expired' => 'کلمه عبور منقضی شده است، یک ایمیل تایید جدید ارسال شد.',
@@ -37,22 +37,22 @@ return [
     'social_driver_not_found' => 'درایور شبکه اجتماعی یافت نشد',
     'social_driver_not_configured' => 'تنظیمات شبکه اجتماعی :socialAccount به درستی پیکربندی نشده است.',
     'invite_token_expired' => 'این پیوند دعوت منقضی شده است. در عوض می توانید سعی کنید رمز عبور حساب خود را بازنشانی کنید.',
-    'login_user_not_found' => 'A user for this action could not be found.',
+    'login_user_not_found' => 'کاربری برای این کار پیدا نمی‌شود.',
 
     // System
     'path_not_writable' => 'مسیر فایل :filePath را نمی توان در آن آپلود کرد. مطمئن شوید که روی سرور قابل نوشتن است.',
     'cannot_get_image_from_url' => 'نمی توان تصویر را از :url دریافت کرد',
     'cannot_create_thumbs' => 'سرور نمی تواند تصاویر کوچک ایجاد کند. لطفاً بررسی کنید که پسوند GD PHP را نصب کرده اید.',
     'server_upload_limit' => 'سرور اجازه آپلود در این اندازه را نمی دهد. لطفا اندازه فایل کوچکتر را امتحان کنید.',
-    'server_post_limit' => 'The server cannot receive the provided amount of data. Try again with less data or a smaller file.',
+    'server_post_limit' => 'سرور نمی‌تواند داده مقادیر ارائه شده داده را دریافت کند. با مقدار کمتر و فایل کوچکتر دوباره امتحان کنید.',
     'uploaded'  => 'سرور اجازه آپلود در این اندازه را نمی دهد. لطفا اندازه فایل کوچکتر را امتحان کنید.',
 
     // Drawing & Images
     'image_upload_error' => 'هنگام آپلود تصویر خطایی روی داد',
     'image_upload_type_error' => 'نوع تصویر در حال آپلود نامعتبر است',
     'image_upload_replace_type' => 'جایگزینی فایل تصویری باید از یک نوع باشد',
-    'image_upload_memory_limit' => 'Failed to handle image upload and/or create thumbnails due to system resource limits.',
-    'image_thumbnail_memory_limit' => 'Failed to create image size variations due to system resource limits.',
+    'image_upload_memory_limit' => 'به دلیل محدودیت منابع سامانه، بارگذاری فایل و/یا ایجاد تصاویر کاور (thumbnails) ناموفق بود.',
+    'image_thumbnail_memory_limit' => 'به دلیل محدودیت منابع سیستم، تصاویر با اندازه گوناگون ایجاد نشدند.',
     'image_gallery_thumbnail_memory_limit' => 'به دلیل محدودیت منابع سیستم، تصاویر کوچک گالری ایجاد نشد.',
     'drawing_data_not_found' => 'داده های طرح قابل بارگذاری نیستند. ممکن است فایل طرح دیگر وجود نداشته باشد یا شما به آن دسترسی نداشته باشید.',
 
@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'شما نمی توانید تنها ادمین را حذف کنید',
     'users_cannot_delete_guest' => 'شما نمی توانید کاربر مهمان را حذف کنید',
+    'users_could_not_send_invite' => 'Could not create user since invite email failed to send',
 
     // Roles
     'role_cannot_be_edited' => 'این نقش قابل ویرایش نیست',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'خطایی رخ داد',
     'app_down' => ':appName در حال حاضر قطع است',
     'back_soon' => 'به زودی پشتیبان خواهد شد.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'هیچ نشانه مجوزی در درخواست یافت نشد',

@@ -37,7 +37,7 @@ return [
     'social_driver_not_found' => 'Драйвер для СоціальноїМережі не знайдено',
     'social_driver_not_configured' => 'Ваші соціальні настройки :socialAccount не правильно налаштовані.',
     'invite_token_expired' => 'Термін дії цього запрошення закінчився. Замість цього ви можете спробувати скинути пароль свого облікового запису.',
-    'login_user_not_found' => 'A user for this action could not be found.',
+    'login_user_not_found' => 'Користувач для цієї дії не знайдений.',
 
     // System
     'path_not_writable' => 'Не вдається завантажити шлях до файлу :filePath. Переконайтеся, що він доступний для запису на сервер.',
@@ -78,6 +78,7 @@ return [
     // Users
     'users_cannot_delete_only_admin' => 'Ви не можете видалити єдиного адміністратора',
     'users_cannot_delete_guest' => 'Ви не можете видалити гостьового користувача',
+    'users_could_not_send_invite' => 'Не вдалося створити користувача, оскільки не вдалося надіслати електронний лист із запрошенням',
 
     // Roles
     'role_cannot_be_edited' => 'Цю роль не можна редагувати',
@@ -103,6 +104,18 @@ return [
     'error_occurred' => 'Виникла помилка',
     'app_down' => ':appName зараз недоступний',
     'back_soon' => 'Він повернеться найближчим часом.',
+
+    // Import
+    'import_zip_cant_read' => 'Could not read ZIP file.',
+    'import_zip_cant_decode_data' => 'Could not find and decode ZIP data.json content.',
+    'import_zip_no_data' => 'ZIP file data has no expected book, chapter or page content.',
+    'import_validation_failed' => 'Import ZIP failed to validate with errors:',
+    'import_zip_failed_notification' => 'Failed to import ZIP file.',
+    'import_perms_books' => 'You are lacking the required permissions to create books.',
+    'import_perms_chapters' => 'You are lacking the required permissions to create chapters.',
+    'import_perms_pages' => 'You are lacking the required permissions to create pages.',
+    'import_perms_images' => 'You are lacking the required permissions to create images.',
+    'import_perms_attachments' => 'You are lacking the required permission to create attachments.',
 
     // API errors
     'api_no_authorization_found' => 'У запиті не знайдено токен авторизації',

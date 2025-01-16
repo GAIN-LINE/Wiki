@@ -40,14 +40,14 @@ return [
     'book_sort_notification'      => 'Livro reordenado com sucesso',
 
     // Bookshelves
-    'bookshelf_create'            => 'prateleira criada',
+    'bookshelf_create'            => 'estante criada',
     'bookshelf_create_notification'    => 'Prateleira criada com sucesso',
     'bookshelf_create_from_book'    => 'livro convertido em estante',
-    'bookshelf_create_from_book_notification'    => 'Capítulo convertido com sucesso em um livro',
-    'bookshelf_update'                 => 'prateleira atualizada',
-    'bookshelf_update_notification'    => 'Prateleira atualizada com sucesso',
-    'bookshelf_delete'                 => 'prateleira excluída',
-    'bookshelf_delete_notification'    => 'Prateleira excluída com sucesso',
+    'bookshelf_create_from_book_notification'    => 'Livro convertido com sucesso em uma estante',
+    'bookshelf_update'                 => 'estante atualizada',
+    'bookshelf_update_notification'    => 'Estante atualizada com sucesso',
+    'bookshelf_delete'                 => 'estante excluída',
+    'bookshelf_delete_notification'    => 'Estante excluída com sucesso',
 
     // Revisions
     'revision_restore' => 'revisão restaurada',
@@ -83,6 +83,14 @@ return [
     'webhook_update_notification' => 'Webhook atualizado com sucesso',
     'webhook_delete' => 'webhook excluído',
     'webhook_delete_notification' => 'Webhook excluido com sucesso',
+
+    // Imports
+    'import_create' => 'importação criada',
+    'import_create_notification' => 'Importação carregada com sucesso',
+    'import_run' => 'importação atualizada',
+    'import_run_notification' => 'Conteúdo importado com sucesso',
+    'import_delete' => 'importação excluída',
+    'import_delete_notification' => 'Importação excluída com sucesso',
 
     // Users
     'user_create' => 'usuário criado',
