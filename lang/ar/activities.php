@@ -85,12 +85,12 @@ return [
     'webhook_delete_notification' => 'تم حذف Webhook بنجاح',
 
     // Imports
-    'import_create' => 'created import',
-    'import_create_notification' => 'Import successfully uploaded',
-    'import_run' => 'updated import',
-    'import_run_notification' => 'Content successfully imported',
-    'import_delete' => 'deleted import',
-    'import_delete_notification' => 'Import successfully deleted',
+    'import_create' => 'تم إنشاء الاستيراد',
+    'import_create_notification' => 'تم رفع الاستيراد بنجاح',
+    'import_run' => 'تم تحديث الاستيراد',
+    'import_run_notification' => 'تم استيراد المحتوى بنجاح',
+    'import_delete' => 'تم حذف الاستيراد',
+    'import_delete_notification' => 'تم الاستيراد بنجاح',
 
     // Users
     'user_create' => 'إنشاء مستخدم',
@@ -101,11 +101,11 @@ return [
     'user_delete_notification' => 'تم إزالة المستخدم بنجاح',
 
     // API Tokens
-    'api_token_create' => 'created API token',
+    'api_token_create' => 'تم إنشاء رمز واجهة برمجة التطبيقات -API-',
     'api_token_create_notification' => 'تم إنشاء رمز الـ API بنجاح',
-    'api_token_update' => 'updated API token',
+    'api_token_update' => 'رمز واجهة برمجة التطبيقات المحدث',
     'api_token_update_notification' => 'تم تحديث رمز الـ API بنجاح',
-    'api_token_delete' => 'deleted API token',
+    'api_token_delete' => 'رمز واجهة برمجة التطبيقات المحذوف',
     'api_token_delete_notification' => 'تم حذف رمز الـ API بنجاح',
 
     // Roles
@@ -126,6 +126,14 @@ return [
     'comment_create'              => 'تعليق مضاف',
     'comment_update'              => 'تعليق محدث',
     'comment_delete'              => 'تعليق محذوف',
+
+    // Sort Rules
+    'sort_rule_create' => 'تم إنشاء قاعدة الفرز',
+    'sort_rule_create_notification' => 'تم إنشاء قاعدة الفرز بنجاح',
+    'sort_rule_update' => 'تم تحديث قاعدة الفرز',
+    'sort_rule_update_notification' => 'تم تحديث قاعدة الفرز بنجاح',
+    'sort_rule_delete' => 'تم حذف قاعدة الفرز',
+    'sort_rule_delete_notification' => 'تم حذف قاعدة الفرز بنجاح',
 
     // Other
     'permissions_update'          => 'تحديث الأذونات',
